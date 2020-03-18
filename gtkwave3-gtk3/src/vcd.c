@@ -2671,7 +2671,8 @@ if(!GLOBALS->vcd_handle_vcd_c_1)
 	vcd_exit(255);
 	}
 
-/* SPLASH */				splash_create();
+/* SPLASH */	
+// splash_create();
 
 sym_hash_initialize(GLOBALS);
 getch_alloc();		/* alloc membuff for vcd getch buffer */

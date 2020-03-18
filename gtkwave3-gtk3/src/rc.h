@@ -122,6 +122,7 @@ int  f_vcd_warning_filesize (char *str);
 int  f_vector_padding (char *str);
 int  f_vlist_compression (char *str);
 int  f_wave_scrolling (char *str);
+int  f_window_config1 (char *str);
 int  f_zoom_base (char *str);
 int  f_zoom_center (char *str);
 int  f_zoom_pow10_snap (char *str);

@@ -2658,7 +2658,7 @@ XXX_gtk_table_attach (XXX_GTK_TABLE (table), GLOBALS->hscroll_wavewindow_c_2, 0,
 #endif
 gtk_widget_show(table);
 
-frame=gtk_frame_new("Waves");
+frame=gtk_frame_new("Scheduler Status (Y-axis:Running Unit, X-axis:Kernel Timestamp)");
 gtk_container_set_border_width(GTK_CONTAINER(frame),2);
 
 gtk_container_add(GTK_CONTAINER(frame),table);

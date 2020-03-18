@@ -1941,7 +1941,7 @@ XXX_gtk_table_attach (XXX_GTK_TABLE (table), GLOBALS->hscroll_signalwindow_c_1, 
 #endif
 gtk_widget_show(table);
 
-frame=gtk_frame_new("Signals");
+frame=gtk_frame_new("Running Units:PROC/THREAD/IRQ/SOFTIRQ/CPU_IDLE");
 gtk_container_set_border_width(GTK_CONTAINER(frame),2);
 
 gtk_container_add(GTK_CONTAINER(frame),table);

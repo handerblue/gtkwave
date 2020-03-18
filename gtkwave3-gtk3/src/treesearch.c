@@ -1411,7 +1411,7 @@ do_tooltips:
 			 		break;
 		}
 
-	column = gtk_tree_view_column_new_with_attributes ("Signals",
+	column = gtk_tree_view_column_new_with_attributes ("Run Unit",
 							   renderer,
 							   "text", NAME_COLUMN,
 							   NULL);
@@ -1657,7 +1657,7 @@ GtkWidget* treeboxframe(char *title, GCallback func)
 					break;
 		}
 
-	column = gtk_tree_view_column_new_with_attributes ("Signals",
+	column = gtk_tree_view_column_new_with_attributes ("Run Unit",
 							   renderer,
 							   "text", NAME_COLUMN,
 							   NULL);

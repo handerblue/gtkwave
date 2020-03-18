@@ -764,6 +764,18 @@ GLOBALS->wave_scrolling=atoi_64(str)?1:0;
 return(0);
 }
 
+int f_window_config1(char *str)
+{
+        int val;
+        DEBUG(printf("f_window_config1(\"%s\")\n",str));
+        GLOBALS->do_initial_zoom_fit=1;
+        GLOBALS->make_vcd_save_file=1;
+        GLOBALS->hide_sst=1;
+        GLOBALS->initial_window_width=1400;
+        GLOBALS->initial_window_height=700;
+        return(0);
+}
+
 int f_zoom_base(char *str)
 {
 float f;
@@ -997,6 +1009,7 @@ static struct rc_entry rcitems[]=
 { "vlist_prepack", f_vlist_prepack },
 { "vlist_spill", f_vlist_spill },
 { "wave_scrolling", f_wave_scrolling },
+{ "window_config1", f_window_config1 },
 { "zoom_base", f_zoom_base },
 { "zoom_center", f_zoom_center },
 { "zoom_dynamic", f_zoom_dynamic },

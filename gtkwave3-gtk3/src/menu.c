@@ -1984,7 +1984,7 @@ if(GLOBALS->helpbox_is_active)
         );
         return;
         }
-
+/* Add version notes here*/
 simplereqbox("Wave Version",480,WAVE_VERSION_INFO,"OK", NULL, NULL, 0);
 }
 /**/

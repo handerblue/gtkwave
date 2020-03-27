@@ -773,6 +773,8 @@ int f_window_config1(char *str)
         GLOBALS->hide_sst=1;
         GLOBALS->initial_window_width=1400;
         GLOBALS->initial_window_height=700;
+        GLOBALS->display_grid = 0;
+        GLOBALS->use_dark = 1;
         return(0);
 }
 

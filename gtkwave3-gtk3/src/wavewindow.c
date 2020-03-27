@@ -2931,6 +2931,10 @@ int RenderSig(Trptr t, int i, int dobackground)
 
   if((t->name)||(subname))
     {
+    /*
+        Draw signal names here
+        key: buf, buf may include bits range representation [%d:%d]
+    */
       XXX_font_engine_draw_string(GLOBALS->cr_signalpixmap,
 			      GLOBALS->signalfont,
 			      &text_color,
@@ -4070,6 +4074,7 @@ if(_x0!=_x1)
 		default:	c = (hval == AN_X) ? GLOBALS->rgb_gc.gc_x_wavewindow_c_1: GLOBALS->rgb_gc.gc_trans_wavewindow_c_1;
 		}
 
+    /* Drawing lines */
 	switch(hval)
 		{
 		case AN_0:	/* 0 */
@@ -4096,6 +4101,7 @@ if(_x0!=_x1)
 			}
 		break;
 
+        /* Drawing Line X, W, U state here. Strings added*/
 		case AN_X: /* X */
 		case AN_W: /* W */
 		case AN_U: /* U */
@@ -4139,6 +4145,7 @@ if(_x0!=_x1)
 		break;
 
 		case AN_Z: /* Z */
+        /* Drawing Line Z state here*/
 		XXX_gdk_draw_line(GLOBALS->cr_wavepixmap_wavewindow_c_1, GLOBALS->rgb_gc.gc_mid_wavewindow_c_1,_x0, yu,_x1, yu);
 		if(h2tim<=GLOBALS->tims.end)
 		switch(h2val)
@@ -4948,6 +4955,7 @@ if(_x0!=_x1)
 
 if(_x0<0) _x0=0;	/* fixup left margin */
 
+    /*skip drawing if too small*/
 	if((width=_x1-_x0)>GLOBALS->vector_padding)
 		{
 		char *ascii2;
@@ -4999,6 +5007,10 @@ if(_x0<0) _x0=0;	/* fixup left margin */
 
 		if((_x1>=GLOBALS->wavewidth)||(font_engine_string_measure(GLOBALS->wavefont, ascii2)+GLOBALS->vector_padding<=width))
 			{
+            /* draw the line for b type wire
+                - key number: ascii2, Hex format of current wire number. 
+                - more fancy representation can be done here
+            */
 			XXX_font_engine_draw_string(GLOBALS->cr_wavepixmap_wavewindow_c_1,GLOBALS->wavefont,&GLOBALS->rgb_gc.gc_value_wavewindow_c_1,_x0+2+0.5,ytext+0.5,ascii2);
 			}
 		else
